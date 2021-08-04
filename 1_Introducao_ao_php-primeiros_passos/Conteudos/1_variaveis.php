@@ -1,7 +1,7 @@
 <?php
 
+// O PHP usa a tipagem dinâmica, ou seja, não precisamos definir o tipo da variável porque ele faz isso por si só.
 // Podemos declarar a variável na hora de executá-la.
-
 // Para declarar um texto (String), devemos colocá-lo dentro de aspas.
 $nome = "Letícia Pacheco";
 
