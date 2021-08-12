@@ -2,10 +2,6 @@
 
 // Nem sempre as functions precisam  de parâmetros, de vez em quando só queremos mostrar ou executar algo, então fazemos assim por ex.:
 
-function helloWorld() {
-  echo "Hello, world!";
-}
-
 $contasCorrentes = [
   '324.567.895-9' => [
     'titular' => 'Letícia',
@@ -45,8 +41,23 @@ function exibeMensagem ($mensagem) {
   echo $mensagem . PHP_EOL;
 }
 
-foreach ($contasCorrentes as $cpf => $conta) {
-  exibeMensagem($cpf . " " . $conta['titular']. " " .$conta['saldo']);
+function depositar ($conta, $valorADepositar) {
+  $conta['saldo'] += $valorADepositar;
+  return $conta;
 }
 
-helloWorld();
+$contasCorrentes['324.567.895-9'] = depositar(
+  $contasCorrentes['324.567.895-9'], 900
+);
+
+/* String simples
+   Ao invés de concatenarmos com espaço e etc para ficar formatado bonitinho, nós colocamos tudo entre aspas e tiramos as aspas simples do array associativo. Ex.:
+   exibeMensagem("$cpf $conta[titular] $conta[saldo]");
+
+   Pois antes o código estava muito poluído dessa forma:
+   exibeMensagem("$cpf $conta['titular'] $conta['saldo']");
+*/
+
+foreach ($contasCorrentes as $cpf => $conta) {
+  exibeMensagem("$cpf {$conta['titular']} {$conta['saldo']}");
+}

@@ -2,10 +2,6 @@
 
 // Nem sempre as functions precisam  de parâmetros, de vez em quando só queremos mostrar ou executar algo, então fazemos assim por ex.:
 
-function helloWorld() {
-  echo "Hello, world!";
-}
-
 $contasCorrentes = [
   '324.567.895-9' => [
     'titular' => 'Letícia',
@@ -45,8 +41,15 @@ function exibeMensagem ($mensagem) {
   echo $mensagem . PHP_EOL;
 }
 
+function depositar ($conta, $valorADepositar) {
+  $conta['saldo'] += $valorADepositar;
+  return $conta;
+}
+
+$contasCorrentes['324.567.895-9'] = depositar(
+  $contasCorrentes['324.567.895-9'], 900
+);
+
 foreach ($contasCorrentes as $cpf => $conta) {
   exibeMensagem($cpf . " " . $conta['titular']. " " .$conta['saldo']);
 }
-
-helloWorld();
