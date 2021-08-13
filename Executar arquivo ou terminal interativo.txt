@@ -1,0 +1,11 @@
+Terminal interativo em PHP:
+
+Para iniciar:	|  Para finalizar:
+php -a		|  quit
+
+
+Para executar um arquivo:
+
+Navegue até a pasta --> copie o caminho da pasta --> cole no cmd (com o cd antes) e dê enter
+
+Para executar um arquivo específico digite: php nomeDoArquivo.php

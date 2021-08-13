@@ -13,6 +13,6 @@ $idade = 17;
 $idade = 18;
 
 // o echo serve para exibir o comando na tela.
-echo $nome;
+echo "Olá, meu nome é $nome e farei $idade anos em outubro!";
 
 // Quando alteramos a variável, o echo sempre chamará o último valor definido.
