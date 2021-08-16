@@ -1,5 +1,7 @@
 <?php
 
+// Caso o arquivo a ser incluído não seja encontrado, require para a execução do programa enquanto include permite que continue.
+
 /* O include serve para chamar um arquivo que não seja tão importante, então, caso o caminho esteja errado, o erro só aparecerá no final das linhas de erros.
 include 'funcoes.php';*/
 
@@ -26,9 +28,24 @@ $contasCorrentes = [
 ];
 
 $contasCorrentes['324.567.895-9'] = depositar(
-    $contasCorrentes['324.567.895-9'], 900
+    $contasCorrentes['324.567.895-9'],
+    900
 );
 
+// A função (ou construção de linguagem) unset exclui uma variável da memória.
+unset($contasCorrentes['324.567.895-9']);
+
+titularLetrasMaiusculas($contasCorrentes['320.167.890-7']);
+
 foreach ($contasCorrentes as $cpf => $conta) {
-    exibeMensagem("$cpf {$conta['titular']} {$conta['saldo']}");
+    /* Às vezes precisamos pegar valores específicos dos arrays, então podemos usar essa forma abaixo.
+       Aqui estamos passando os dados através de uma lista. Podíamos passar dessa forma: list($contaLeticia, $contaSaulo, $contaAna) = $contasCorrentes caso não
+       tivéssemos dado uma chave para cada um (que, nesse caso, é o CPF), ou seja, se o índice, por padrã, fosse numérico, que aí seria exibido na tela as contas
+       em ordem (do 0 em diante).*/
+    ['titular' => $titular, 'saldo' => $saldo] = $conta;
+    exibeMensagem(
+        "$cpf $titular $saldo"
+    );
+    // Para exibir de forma mais detalhada, usamos essa fórmula abaixo, mas assim, ali em cima fica uma forma mais enxuta e bonita de deixar no código.
+    // exibeMensagem("$cpf {$conta['titular']} {$conta['saldo']}");
 }
