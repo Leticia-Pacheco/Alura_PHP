@@ -1,4 +1,6 @@
 <?php
+// Quando deixamos que o PHP defina qual o índice dos elementos do array, dizemos que é um array numérico;
+// Quando nós definimos o índice dos elementos do array, chamamos de array associativo.
 
 // Aqui estamos criando um array com diversos tipos de dados (ex.: string, double, float, int, etc.) e o nome disso é array associativo.
 

@@ -13,7 +13,9 @@ function sacar($conta, $valorASacar)
 
 function exibeMensagem($mensagem)
 {
-    echo $mensagem . PHP_EOL;
+    // Quando abrimos no navegador, o código não vem formatado pois o navegador interpreta o HTML, então mudamos de PHP_EOL para <br>.
+    echo $mensagem . '<br>';
+    // echo $mensagem . PHP_EOL;
 }
 
 function depositar($conta, $valorADepositar)
@@ -44,4 +46,17 @@ function titularLetrasMaiusculas(array &$conta) {
     // Caso você queira usar o PHP apnass compilado, sem ter que usar a extensão mb, use apenas strtoupper ao invés de mb_strtoupper.
     // Estamos chamando a função mb_strtoupper e passando o titular da conta como parâmetro.
     $conta['titular'] = strtoupper($conta['titular']);
+}
+
+function exibeConta (array $conta) {
+
+    /* Para melhorar o código e deixá-lo mais "limpo", vamos usar a função list.
+       Estamos dizendo que os dados titular e saldo serão armazenados em suas respectivas variáveis ($titular e $saldo) e esses dados são pegos da variável 
+       $conta, que armazena o array de contas*/
+    ['titular' => $titular, 'saldo' => $saldo] = $conta;
+    echo "<li>Titular: $titular. Saldo: $saldo</li>";
+
+
+    // Aqui estamos colocando os dados de cada conta em cada linha da lista. Usamos o tipo de string simples para exibir o titular e complexa para exibir o saldo.
+    // echo "<li>Titular: $conta[titular]. Saldo: {$conta['saldo']}</li>";
 }

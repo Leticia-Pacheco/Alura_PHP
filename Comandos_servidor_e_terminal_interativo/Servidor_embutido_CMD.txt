@@ -1,0 +1,8 @@
+Built-in web server: NÃO é um servidor para rodarmos em ambiente de produção, é apenas para fazermos nossos testes, executar algum comando, enfim.
+
+
+Comando para abrir no CMD:
+
+php -S ondeQueroExecutar:porta
+
+ex.: php -S localhost:8080
