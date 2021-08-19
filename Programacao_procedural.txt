@@ -1,0 +1,26 @@
+• Que programar utilizando procedimentos executados sequencialmente é chamado de   programação procedural.
+
+• Alguns problemas da programação procedural, como repetição de código e falta da   definição explícita de tipos, em alguns casos.
+
+• Que Abstração é a prática de abstrair algo do mundo real, trazendo apenas o que   for necessário para o nosso sistema.
+
+• Que a Abstração é um pilar da orientação a objetos.
+
+• Quando colocamos, por exemplo, diversas funções que não tem nada a ver uma com a     outra dentro do mesmo arquivo, isso se chama programação procedural, ou seja,     tenho vários procedimentos (que podem estar separados), mas que não estão bem     organizados, diga-se de passagem.
+
+  Neste primeiro vídeo, é dito que um dos problemas que podemos enfrentar com a     programação procedural é a reutilização de código.
+
+  Por que separar o nosso código em funções não é suficiente para reutilizar código?
+
+  Resposta:
+  Porque, como os dados são separados do comportamento, nada obriga o desenvolvedor    a utilizar a função já existente. Os dados de uma conta estão separados das     funções de depositar e sacar, por exemplo. Nada impede um outro desenvolvedor de     realizar o saque em uma conta, sem utilizar a nossa função já existente. A menos     que uma boa documentação seja escrita e seguida à risca, não há garantia de que o    código será reutilizado.
+
+• Outro problema é que conseguimos acessar todos os dados do nosso programa e     executar comandos que, pelas nossas regras de negócio, não são aceitos. Ex.: Se eu   executar um comando para sacar da minha conta 700 reais mas nela eu só tiver 500,    ficarei com um saldo negativo, e isto não pode.
+
+  Além do problema da reutilização de código, temos ainda peças soltas em nosso     código.
+
+  Por que ter os dados e o comportamento separados em nosso sistema é ruim?
+
+  Porque, desta forma, nada obriga que as funções corretas sejam utilizadas para     realizar operações em nossos dados
+
+  Tendo as funcionalidades de sacar e depositar separadas da definição dos dados da    conta, por exemplo, faz com que outros desenvolvedores possam simplesmente não       utilizar as funções já existentes, levando a inconsistências em nosso sistema.

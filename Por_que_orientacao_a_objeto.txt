@@ -1,0 +1,2 @@
+O nome "Orientação a objetos" vem do fato de que tenho uma classe e, a partir dessa classe posso criar objetos e, a partir desses objetos monto minha programação.
+Então a programação deixa de ser orientada a funções (que é a programação procedural) e começa a ser orientada aos objetos que tenho no meu sistema.
